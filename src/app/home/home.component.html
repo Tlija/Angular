@@ -1,0 +1,29 @@
+<p >home works!</p>
+<!-- <h3 [style]="titleStyle">My Name is {{ firstName}} and my lastName is {{ lastName}}</h3>
+<img src={{linkImage}} alt="" ngClass="maher">
+<h3 [style]="titleStylee">hello maherr</h3>
+<button (click)="show()"> showw</button> 
+<button (click)="hidden()">hidden</button>
+<h3>{{number}}</h3> -->
+<input type="text" [(ngModel)]="number">
+<button (click)="dec()"> dec</button>
+<button (click)="inc()"> inc</button>
+<p *ngIf="x===y">Hello word</p>
+<div *ngFor="let item of dataArray; index as i">
+    <p>{{i+1}} {{item}}</p>
+</div>
+
+<div [ngSwitch]="number">
+    <p *ngSwitchCase="1">First</p>
+    <p *ngSwitchCase="2">second</p>
+    <p *ngSwitchCase="3">third</p>
+
+</div>
+<P [ngClass]="'title'">ALHAMDOULELLAH</P>
+<!--Navigate-->
+
+<ng-content select="h1"></ng-content>
+
+
+<button class="btn btn-primary"(click)="gotoview()" > View Profil</button>
+<button class="btn btn-success" (click)="gotodetails()"> Profil Details</button>
