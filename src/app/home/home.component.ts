@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { SherServesService } from '../services/sher-serves.service';
 
@@ -14,9 +14,15 @@ export class HomeComponent {
  linkImage="https://th.bing.com/th/id/OIP.avb9nDfw3kq7NOoP0grM4wHaEK?w=286&h=180&c=7&r=0&o=5&pid=1.7"
   titleStyle="color:red"
   titleStylee="block"
+  /**envoyee le data p to chil */
+  @Input("name") myName:any
+  @Input("myProfil") p:any
+  
   constructor(private route:Router,private share:SherServesService){
   this.share.print()
+  console.log(this.p)
   }
+
   
   show(){
     this.titleStylee="block"
