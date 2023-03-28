@@ -1,0 +1,47 @@
+
+<!--
+<form #f="ngForm" (ngSubmit)="add(f)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" ngModel  #email="ngModel"  required="true" minlength="5">
+    <div class="alert alert-danger" role="alert" *ngIf="email.errors?.['required'] && email.touched">
+      this input is required!
+    </div>
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" #password="ngModel" name="password" ngModel required="true" minlength="5">
+    <div class="alert alert-danger" role="alert" *ngIf="password.errors?.['required'] && password.touched">
+      this input is required!
+    </div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1"  >
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Submit</button>
+</form> -->
+<!--==============Validation des form=======================================-->
+<!-- <form [formGroup]="myForme" (ngSubmit)="print()" >
+<input type="text" name="" formControlName="fname" placeholder="fname" id="" required="true">
+<div class="alert alert-danger" *ngIf="fname.touched && fname.hasError('required')">this inpt is required</div>
+<input type="text" name="" formControlName="age" placeholder="age" id="" required="true">
+<div class="alert alert-danger" *ngIf="myForme.get('age').touched && myForme.get('age').hasError('required')">this inpt is required</div>
+<input type="text" name="" formControlName="email" placeholder="email" id="" required="true">
+<div class="alert alert-danger" *ngIf="email.touched && email.hasError('required')">this inpt is required</div>
+<div class="alert alert-danger" *ngIf="email.hasError('email')">this is not email</div> -->
+
+<!-- <div formArrayName="items">
+  <div *ngFor="let item of myForme.controls.items['controls'];index as i "[formGroupName]="i">
+ <input type="text" name="" id="" formControlName="id">
+ <input type="text" name="" id="" formControlName="title">
+<button (click)="delete(i)">delete this row</button>
+  </div>
+</div>
+<button  (click)="addnew()">AddNew</button> -->
+
+<!--=============validations des email et des inpt et buttom*/===============-->
+<!-- <button class="submit"[disabled]="myForme.invalid"> submit</button>
+
+</form> -->
