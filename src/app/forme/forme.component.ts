@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef,AfterViewInit, EventEmitter, Input, Output, ViewChild, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ShareReplayConfig, Subscription } from 'rxjs';
@@ -9,12 +9,17 @@ import { ShareServiceService } from '../services/share-service.service';
   templateUrl: './forme.component.html',
   styleUrls: ['./forme.component.css']
 })
-export class FormeComponent {
+export class FormeComponent implements OnInit,AfterViewInit{
 
 
 num:any
 // ob:Subscription
 ob2 :Subscription
+
+@Input("name") myName:any
+
+@Output()myEvent=new EventEmitter()
+ names="RamadhanMobarek"
 
   // myForme=new FormGroup({
   //   fname:new FormControl,
@@ -25,6 +30,9 @@ ob2 :Subscription
 
   myForme:any
 /**validations  les input */
+ngOnInit(): void {
+
+}
   constructor(private formbuilder:FormBuilder,private route:ActivatedRoute, private share:ShareServiceService){
 
 this.myForme=this.formbuilder.group({
@@ -56,6 +64,10 @@ this.share.testObservabel().subscribe(val=>console.log(val)).unsubscribe()
 
 
 
+  }
+/**data  send child to parent  */
+  printdata(){
+    this.myEvent.emit(this.names)
   }
   print(){
     console.log(this.myForme);
@@ -92,6 +104,11 @@ this.share.testObservabel().subscribe(val=>console.log(val)).unsubscribe()
   delete(i:any){
     this.items.removeAt(i)
 
+  }
+/**controle input de  html  avec component .ts */
+  @ViewChild('firstname')myInput!:ElementRef
+  ngAfterViewInit(): void {
+      this.myInput.nativeElement.value="tlija"
   }
 }
 

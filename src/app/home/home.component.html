@@ -41,4 +41,7 @@ hachem
 <p>{{date | date:'shortTime'}}</p>
 <button class="btn btn-primary" (click)="gotToView()">View Profile</button>
 <button class="btn btn-success "(click)="goToDetails()">Details Profile</button> -->
-<app-forme></app-forme>
+
+<app-forme [name]="Namee" (myEvent)="printData($event)">
+  <h2>Welcom karama solution</h2>
+</app-forme>

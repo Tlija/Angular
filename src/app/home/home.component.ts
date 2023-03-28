@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ShareServiceService } from '../services/share-service.service';
 
@@ -20,9 +21,16 @@ style1 ="red"
 style2="30px"
 style3="underline"
 date="03/24/2023"
+Namee="maher"
 
-constructor(private route:Router, private share:ShareServiceService){
+constructor(private route:Router, private share:ShareServiceService,private http:HttpClient){
  this.share.print()
+
+ this.http.get( 'http://localhost:3000')
+}
+
+printData(event:string){
+  console.log(event);
 }
 
 
@@ -30,7 +38,10 @@ verif=true
 dataArray=["tunisia","libya","Algiria","Egypt"]
 
 
-constractor(){}
+constractor( ){
+
+
+}
 inc(){
   this.profile.number++
 

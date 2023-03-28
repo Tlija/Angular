@@ -7,6 +7,7 @@ import { ShareServiceService } from '../services/share-service.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+
   constructor( private share:ShareServiceService){
     console.log(this.share.data);
 

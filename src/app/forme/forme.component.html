@@ -23,25 +23,34 @@
   <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Submit</button>
 </form> -->
 <!--==============Validation des form=======================================-->
-<!-- <form [formGroup]="myForme" (ngSubmit)="print()" >
+<form [formGroup]="myForme" (ngSubmit)="print()" >
 <input type="text" name="" formControlName="fname" placeholder="fname" id="" required="true">
 <div class="alert alert-danger" *ngIf="fname.touched && fname.hasError('required')">this inpt is required</div>
 <input type="text" name="" formControlName="age" placeholder="age" id="" required="true">
 <div class="alert alert-danger" *ngIf="myForme.get('age').touched && myForme.get('age').hasError('required')">this inpt is required</div>
 <input type="text" name="" formControlName="email" placeholder="email" id="" required="true">
 <div class="alert alert-danger" *ngIf="email.touched && email.hasError('required')">this inpt is required</div>
-<div class="alert alert-danger" *ngIf="email.hasError('email')">this is not email</div> -->
+<div class="alert alert-danger" *ngIf="email.hasError('email')">this is not email</div>
 
-<!-- <div formArrayName="items">
+<div formArrayName="items">
   <div *ngFor="let item of myForme.controls.items['controls'];index as i "[formGroupName]="i">
  <input type="text" name="" id="" formControlName="id">
  <input type="text" name="" id="" formControlName="title">
 <button (click)="delete(i)">delete this row</button>
   </div>
 </div>
-<button  (click)="addnew()">AddNew</button> -->
+<button  (click)="addnew()">AddNew</button>
 
 <!--=============validations des email et des inpt et buttom*/===============-->
-<!-- <button class="submit"[disabled]="myForme.invalid"> submit</button>
+ <button class="submit"[disabled]="myForme.invalid"> submit</button>
 
-</form> -->
+</form>
+<!-- send   data parent to child-->
+
+<ng-content select="h2"></ng-content>
+<h1>my name is {{myName}}</h1>
+<button (click)="printdata()"> print</button>
+<br>
+
+<input type="text" name="" id="" #firstname>
+
