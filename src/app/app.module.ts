@@ -14,7 +14,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormeComponent } from './forme/forme.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { EnvironementComponent } from './environement/environement.component'
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http'
     PageNotFoundComponent,
     NavBarComponent,
     FormeComponent,
+    EnvironementComponent,
 
   ],
   imports: [
