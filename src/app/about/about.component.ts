@@ -10,7 +10,8 @@ import { ShareServiceService } from '../services/share-service.service';
 export class AboutComponent {
   lists={
     email:'zzzzz',
-    role:'azeaz'
+    role:'azeaz',
+    name:"tlija"
   }
 
 
